@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="ticketbooking.js"></script>
+   
+</head>
+<body>
+    <!--CODE FOR HEADER AREA-->>
+ <div id="master">
+    <div id="header">Dream Travel</div>     
+    <div id="header-menu">
+                <a href="#">Home</a>
+                <a href="#">About Us</a>
+                <a href="#">Tours</a>
+                <a href="#">Destinations</a>
+                <a href="#">Contact Us</a>
+    </div>
+    <div id="quote"><h1>Every journey starts here</h1></div>
+   <div id="content">
+       <h3>Booking Details</h3>
+
+     <form name="myform" action="newHTML.html" method="post">
+
+<input type="radio" name="way" id="Oneway" value="oneway" onclick=" checkButton()">One-way
+<input type="radio" name="way" id="Roundtrip" value="roundtrip"  onclick=" checkButton()" >Round-trip<br><br>
+
+From: <select id="departure" name="departure" required>
+    <option value=" "></option>
+   <option value="Singapore">Singapore(Changi),Singapore</option>
+   <option value="Melbourne">Melbourne(MEL),Australia</option>
+   <option value="Tokyo">Tokyo(TOYO),Japan</option>
+   <option value="Delhi">Delhi(DEL),India</option>
+   <option value="London">London(LHR),London</option>
+   <option value="Auckland">Auckland(Akl),New Zealand</option>
+      </select>
+ 
+      To: <select id="arrival" name="arrival" required>
+        <option value=" "></option>
+        <option value="Singapore">Singapore(Changi),Singapore</option>
+        <option value="Melbourne">Melbourne(MEL),Australia</option>
+        <option value="Tokyo">Tokyo(TOYO),Japan</option>
+        <option value="Delhi">Delhi(DEL),India</option>
+        <option value="London">London(LHR),London</option>
+        <option value="Auckland">Auckland(Akl),New Zealand</option>
+          </select> <br><br>
+
+          Departure date: <input type="date" name="departuredate" id="departuredate"><span></span>
+          Return date: <input type="date" name="returndate" id="returndate"><br>
+          
+       <h4>Number of Passengers</h4>
+       Adults: <input type="text" name="num-A" id="num-A" onblur="checkPassenger()" >
+       Children: <input type="text" name="num-C" id="num-C" >
+       <br>  
+       <h4>Passenger 1 Details</h4>
+       Name: <input type="text" name="name" id="name" pattern="[a-zA-Z]" title="Name should have alphabets with minimum five" onblur="Validname()">
+       <input type="radio" name="gender" id="male1" value="male1" >Male
+       <input type="radio" name="gender" id="female1" value="female1">Female<span></span>
+     Age: <input type="text" name="name1" id="name1"><br>
+
+       <h4>Passenger 2 Details</h4>
+       Name: <input type="text" name="name" id="name" onblur= "validname()">
+       <input type="radio" name="gender" id="male2" value="male2" >Male
+       <input type="radio" name="gender" id="female2" value="female2">Female
+       Age: <input type="text" name="name2" id="name3"><br><br>
+    
+       Food type: <select id="food" name="food" required>
+       <option value="veg">veg</option>
+       <option value="non-veg">non-veg</option>
+          </select>
+        Travel Class: <select id="seat" name="seat" required>
+            <option value="Economy">Economy</option>
+            <option value="Business">Business</option>
+            <option value="First">First</option>
+               </select>
+       <h4>Payment Details:</h4>
+       Full Name: <input type="text" name="name" id="name" pattern="[a-zA-Z]" title="Name should have alphabets with minimum five">
+       Email: <input type="email" name="email" id="email" onblur=" Checkmail()">
+       Mobile: <input type="text" name="num-Age" id="age" onblur=" Checkmob()"><br>
+
+       <input type="submit" name="submit" value="Submit"/>
+</div>
+<div id="permission">
+    <h4> copyright
+     &copy; 2022  All rights reserved</h4>
+ </div>
+</div>
+</body>
+</html>
