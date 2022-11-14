@@ -24,7 +24,7 @@
        margin-right: 30px;
    }
 #master{
-       background-image: url(images/river.jpg);
+       background-image: url("images/river.jpg");
        background-repeat: no-repeat;
        background-size: cover;
        height: 1370px;
